@@ -1,13 +1,13 @@
 import 'package:flare_flutter/flare.dart';
-import 'package:flare_dart/math/mat2d.dart';
+
 import 'package:flare_flutter/flare_controller.dart';
 
 class SmileyController extends FlareController {
-  ActorAnimation _blink;
+  late ActorAnimation _blink;
   double _timer = 0;
   @override
   void initialize(FlutterActorArtboard artboard) {
-    _blink = artboard.getAnimation('blink');
+    _blink = artboard.getAnimation('blink')!;
   }
 
   @override
